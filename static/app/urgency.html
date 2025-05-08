@@ -1,1 +1,66 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Urgency Scale | CodeREAD</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #990000;
+    }
+    .gauge-container {
+      width: 300px;
+      height: 150px;
+      background: conic-gradient(green 0deg, orange 90deg, red 180deg);
+      border-radius: 150px 150px 0 0;
+      margin: 40px auto;
+      position: relative;
+    }
+    .needle {
+      width: 6px;
+      height: 100px;
+      background: black;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform-origin: bottom center;
+      transform: rotate(135deg); /* Example: adjust based on urgency */
+    }
+    .labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      font-weight: bold;
+      padding: 0 20px;
+    }
+    .legend {
+      margin-top: 40px;
+      font-size: 0.95em;
+    }
+    .legend div {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Urgency Scale</h1>
+  <div class="gauge-container">
+    <div class="needle"></div>
+  </div>
+  <div class="labels">
+    <span>Low</span>
+    <span>Medium</span>
+    <span>High</span>
+  </div>
+  <div class="legend">
+    <div><strong>Low (0–30):</strong> Can wait until next visit.</div>
+    <div><strong>Medium (40–70):</strong> Fix soon — recommended within a week.</div>
+    <div><strong>High (80–100):</strong> See a mechanic immediately.</div>
+  </div>
+</body>
+</html>
